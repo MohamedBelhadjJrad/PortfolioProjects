@@ -10,7 +10,7 @@ Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deat
 From covid19..CovidDeaths
 where continent is not null 
 order by 1,2
-go
+
 
 
 
@@ -25,7 +25,6 @@ group by continent
 select top 3 *,((tot_icu + tot_hosp)/ cast(tot_cases as float))*100 as hosp_percentage
 from NEW
 order by hosp_percentage desc;
-go
 
 
 
@@ -38,7 +37,6 @@ Where continent is null
 and location not in ('World', 'European Union', 'International')
 Group by location
 order by TotalDeathCount desc;
-go
 
 
 -- 3
@@ -46,7 +44,6 @@ Select Location, Population, MAX(total_cases) as HighestInfectionCount,  Max((ca
 From covid19..CovidDeaths
 Group by Location, Population
 order by PercentPopulationInfected desc;
-go
 
 
 -- 4
@@ -54,12 +51,9 @@ Select Location, date, population, total_cases, total_deaths
 From covid19..CovidDeaths
 where continent is not null 
 order by 1,2;
-go
-
 
 
 -- 5
-go
 With PopvsVac (Continent, Location, Date, Population, New_Vaccinations, RollingPeopleVaccinated)
 as
 (
@@ -73,7 +67,6 @@ where dea.continent is not null
 )
 Select *, (cast(RollingPeopleVaccinated as float)/Population)*100 as PercentPeopleVaccinated
 From PopvsVac;
-go
 
 
 --6
