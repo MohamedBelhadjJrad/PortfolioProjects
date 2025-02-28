@@ -7,7 +7,7 @@ Cleaning Data in SQL Queries
 
 Select *
 From NH..NashvilleHousing
-go
+
 
 -- Standardize Date Format
 Select saleDate, CONVERT(Date,SaleDate)
@@ -15,8 +15,8 @@ From	NH..NashvilleHousing
 
 Update NashvilleHousing
 SET SaleDate = CONVERT(Date,SaleDate)
-go
 
+	
 
 
 -- Populate Property Address data
@@ -41,7 +41,7 @@ JOIN NH..NashvilleHousing b
 	on a.ParcelID = b.ParcelID
 	AND a.[UniqueID ] <> b.[UniqueID ]
 Where a.PropertyAddress is null
-go
+
 
 
 
@@ -85,7 +85,9 @@ SET OwnerSplitAddress = PARSENAME(REPLACE(OwnerAddress, ',', '.') , 3)
 
 Select *
 From NH..NashvilleHousing
-go
+
+
+	
 
 
 -- Change Y and N to Yes and No in "Sold as Vacant" field
@@ -104,7 +106,10 @@ SET SoldAsVacant = CASE When SoldAsVacant = 'Y' THEN 'Yes'
 	   When SoldAsVacant = 'N' THEN 'No'
 	   ELSE SoldAsVacant
 	   END
-go
+
+
+
+	
 
 -- Remove Duplicates
 
@@ -132,7 +137,7 @@ Order by PropertyAddress
 
 Select *
 From NH..NashvilleHousing
-go
+
 
 
 
