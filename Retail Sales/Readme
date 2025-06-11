@@ -1,2 +1,8 @@
+This comprehensive retail sales analysis project demonstrates advanced data analytics capabilities applied to a global retail chain dataset. Using Python, SQL, and Tableau, I conducted multi-dimensional analysis across 243 store locations in 9 
+regions to uncover significant revenue optimization opportunities. The analysis revealed potential for over $2.5M in annual revenue growth through targeted discount strategies, marketing spend reallocation, and regional product mix optimization.
+Key components include exploratory data analysis, statistical hypothesis testing, geographical analysis, time series decomposition, and cluster analysis of store performance. The project showcases my ability to transform raw retail data into
+actionable business insights with clear implementation steps and quantified ROI projections. Interactive dashboards provide dynamic visualization of key findings, while the comprehensive report details methodology, insights, and strategic
+recommendations with supporting visualizations.
+
 Data link: https://www.kaggle.com/datasets/abdullah0a/retail-sales-data-with-seasonal-trends-and-marketing/versions/1?select=Retail%20and%20wherehouse%20Sale.csv
 Tableau dashboards link: https://public.tableau.com/app/profile/mohamed.belhadj.jrad/viz/Book1_17495746159180/OverviewDashboard
